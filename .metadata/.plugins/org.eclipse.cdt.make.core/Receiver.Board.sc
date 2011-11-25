@@ -116,7 +116,14 @@
 <definedSymbol symbol="__AVR__=1"/>
 <definedSymbol symbol="AVR=1"/>
 <definedSymbol symbol="__AVR_ARCH__=2"/>
+<definedSymbol symbol="__AVR_ARCH__=4"/>
 <definedSymbol symbol="__AVR_2_BYTE_PC__=1"/>
+<definedSymbol symbol="__AVR_ATmega8__=1"/>
+<definedSymbol symbol="__AVR_HAVE_MOVW__=1"/>
+<definedSymbol symbol="__AVR_HAVE_LPMX__=1"/>
+<definedSymbol symbol="__AVR_ENHANCED__=1"/>
+<definedSymbol symbol="__AVR_HAVE_MUL__=1"/>
+<definedSymbol symbol="F_CPU=12000000UL"/>
 </collector>
 </instance>
 <instance id="de.innot.avreclipse.configuration.app.release.1793502812;de.innot.avreclipse.configuration.app.release.1793502812.">
@@ -350,7 +357,14 @@
 <definedSymbol symbol="__AVR__=1"/>
 <definedSymbol symbol="AVR=1"/>
 <definedSymbol symbol="__AVR_ARCH__=2"/>
+<definedSymbol symbol="__AVR_ARCH__=4"/>
 <definedSymbol symbol="__AVR_2_BYTE_PC__=1"/>
+<definedSymbol symbol="__AVR_ATmega8__=1"/>
+<definedSymbol symbol="__AVR_HAVE_MOVW__=1"/>
+<definedSymbol symbol="__AVR_HAVE_LPMX__=1"/>
+<definedSymbol symbol="__AVR_ENHANCED__=1"/>
+<definedSymbol symbol="__AVR_HAVE_MUL__=1"/>
+<definedSymbol symbol="F_CPU=12000000UL"/>
 </collector>
 </instance>
 </scannerInfo>
