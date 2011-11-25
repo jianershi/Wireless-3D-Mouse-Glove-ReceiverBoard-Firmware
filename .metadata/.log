@@ -1,0 +1,48 @@
+!SESSION 2011-11-25 08:00:55.589 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_29
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -data C:\Users\Paul Shi\git_project\eclipse.workspace -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ui.workbench 2 0 2011-11-25 08:01:35.375
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-11-25 08:01:35.375
+!MESSAGE Conflict for 'org.eclipse.ltk.ui.refactor.create.refactoring.script':
+HandlerActivation(commandId=org.eclipse.ltk.ui.refactor.create.refactoring.script,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.jdt.internal.ui.refactoring.actions.CreateRefactoringScriptAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.jdt.ui.CodingActionSet,org.eclipse.ui.internal.WorkbenchWindow@628d2280),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@628d2280)),sourcePriority=16640)
+HandlerActivation(commandId=org.eclipse.ltk.ui.refactor.create.refactoring.script,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ltk.ui.refactoring.actions.CreateRefactoringScriptAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.cdt.ui.CodingActionSet,org.eclipse.ui.internal.WorkbenchWindow@628d2280),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@628d2280)),sourcePriority=16640)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-11-25 08:01:35.376
+!MESSAGE Conflict for 'org.eclipse.ltk.ui.refactor.show.refactoring.history':
+HandlerActivation(commandId=org.eclipse.ltk.ui.refactor.show.refactoring.history,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.jdt.internal.ui.refactoring.actions.ShowRefactoringHistoryAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.jdt.ui.CodingActionSet,org.eclipse.ui.internal.WorkbenchWindow@628d2280),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@628d2280)),sourcePriority=16640)
+HandlerActivation(commandId=org.eclipse.ltk.ui.refactor.show.refactoring.history,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ltk.ui.refactoring.actions.ShowRefactoringHistoryAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.cdt.ui.CodingActionSet,org.eclipse.ui.internal.WorkbenchWindow@628d2280),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@628d2280)),sourcePriority=16640)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-11-25 08:01:35.376
+!MESSAGE Conflict for 'org.eclipse.ltk.ui.refactor.apply.refactoring.script':
+HandlerActivation(commandId=org.eclipse.ltk.ui.refactor.apply.refactoring.script,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.jdt.internal.ui.refactoring.actions.ApplyRefactoringScriptAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.jdt.ui.CodingActionSet,org.eclipse.ui.internal.WorkbenchWindow@628d2280),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@628d2280)),sourcePriority=16640)
+HandlerActivation(commandId=org.eclipse.ltk.ui.refactor.apply.refactoring.script,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ltk.ui.refactoring.actions.ApplyRefactoringScriptAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.cdt.ui.CodingActionSet,org.eclipse.ui.internal.WorkbenchWindow@628d2280),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@628d2280)),sourcePriority=16640)
+!SESSION 2011-11-25 08:02:25.423 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_29
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -data C:\Users\Paul Shi\git_project\eclipse.workspace -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-11-25 08:03:34.068
+!MESSAGE Indexed 'Receiver.Board.3' (4 sources, 28 headers) in 1.14 sec: 734 declarations; 943 references; 6 unresolved inclusions; 3 syntax errors; 75 unresolved names (4.28%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-11-25 08:03:59.864
+!MESSAGE Indexed 'Receiver.Board.3' (4 sources, 28 headers) in 0.75 sec: 734 declarations; 943 references; 6 unresolved inclusions; 3 syntax errors; 75 unresolved names (4.28%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-11-25 08:04:04.520
+!MESSAGE Indexed 'Receiver.Board' (4 sources, 28 headers) in 0.53 sec: 734 declarations; 943 references; 6 unresolved inclusions; 3 syntax errors; 75 unresolved names (4.28%)
