@@ -1,0 +1,123 @@
+/*
+ * uart.c
+ *
+ *  Created on: Nov 18, 2011
+ *      Author: Paul Shi
+ */
+
+
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <avr/pgmspace.h>
+//#include <util/setbaud.h>
+#include <avr/pgmspace.h>
+#include "uart.h"
+#include <stddef.h>
+
+static volatile struct node *Head;
+static volatile struct node *Tail;
+
+void uart_init(uint32_t baud, enum UART_SPEED_MODE SendingSpeed)
+{
+
+	UCSRC = _BV(URSEL)|_BV(UCSZ1)|_BV(UCSZ0); // Asyncrhnous, No Parity, 1 Stop Bit, 8bit
+
+
+
+	switch (SendingSpeed)
+	{
+		case USE_1X:
+			UCSRA &= ~_BV(U2X);
+			UBRRH=(unsigned char) (UBRR_VALUE(baud)>>8);
+			UBRRL=(unsigned char) (UBRR_VALUE(baud) & 0xFF);
+			break;
+		case USE_2X:
+			UCSRA |= _BV(U2X);
+			UBRRH=(unsigned char) (UBRR_VALUE_DOUBLE_SPEED(baud)>>8);
+			UBRRL=(unsigned char) (UBRR_VALUE_DOUBLE_SPEED(baud) & 0xFF);
+			break;
+
+	}
+
+
+
+	//create new linklist
+	Head=(struct node *)malloc(sizeof(struct node));
+	Tail=Head;
+	Head->m_pnext=NULL;
+
+
+
+    //Enable receive interrupt, enable Receiver and Transmitter
+	UCSRB = _BV(RXCIE)|_BV(RXEN)|_BV(TXEN);
+
+
+}
+
+
+int8_t uart_heap_putc(unsigned char data)
+{
+	Head->m_pnext=(struct node *)malloc(sizeof(struct node));
+	if (Head->m_pnext==NULL) //Heap full
+		return -1; //unsuccessful
+
+	//succesfully allocated
+
+	cli();
+	Head=Head->m_pnext; //update head
+	Head->m_data=data; //insert data
+
+	sei();
+	Head->m_pnext=NULL;
+
+
+	//enable TX interrupt
+	 UCSRB |= _BV(UDRIE);
+
+	 return 0;
+
+}
+
+int8_t uart_heap_puts(const char *s)
+{
+	int8_t allocatestatus;
+    while (*s!='\0')
+    {
+    	allocatestatus=uart_heap_putc(*s++);
+    	if (allocatestatus==-1)
+    	{
+    		return -1; //heap full, return fail
+    	}
+    }
+
+    return 0;
+}
+
+
+//Sending Interrupt
+ISR(USART_UDRE_vect)
+{
+	struct node * oldtail;
+	if (Head!=Tail) //buffer not empty
+	{
+		oldtail=(struct node *)Tail;
+		UDR=Tail->m_data;
+		Tail=Tail->m_pnext;//updata tail
+		oldtail->m_pnext=NULL;
+		free(oldtail);
+	}
+
+	else{
+		/* tx buffer empty, disable UDRE interrupt */
+		UCSRB &= ~_BV(UDRIE);
+
+	}
+
+
+}
+
+
+ISR(USART_RXC_vect)
+{
+
+}

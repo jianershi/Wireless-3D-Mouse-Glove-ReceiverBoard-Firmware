@@ -1,0 +1,20 @@
+#Fri Nov 25 14:04:24 CST 2011
+avrdudepropertypage/weight_preview_expanded=20
+avrdude/configs/programmerconfig.1/description=Default AVRDude Programmer Configuration. Modify as required for your setup.
+avrdude/configs/programmerconfig.1/programmer=usbtiny
+avrpaths//systempath/AVRGCC=C\:\\WinAVR-20100110\\bin
+avrdude/configs/programmerconfig.1/port=
+avrdudepropertypage/weight_preview_collapsed=50
+avrpaths//systempath/PDFPATH=
+eclipse.preferences.version=1
+avrdude/configs/programmerconfig.1/ppresetline=
+avrdude/configs/programmerconfig.1/ppvccline=
+avrdude/configs/programmerconfig.1/postAvrdudeDelayMs=
+avrdudepropertypage/previewexpanded=false
+avrdudepropertypage/weight_top_collapsed=950
+avrdudepropertypage/weight_top_expanded=80
+avrpaths//systempath/AVRINCLUDE=C\:\\WinAVR-20100110\\avr\\include
+avrdude/configs/programmerconfig.1/name=AVR Pocket Programmer
+avrdude/configs/programmerconfig.1/baudrate=
+avrpaths//systempath/AVRDUDE=C\:\\WinAVR-20100110\\bin
+avrpaths//systempath/MAKE=C\:\\WinAVR-20100110\\utils\\bin

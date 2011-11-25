@@ -1,0 +1,33 @@
+#ifndef UART_H
+#define UART_H
+
+#include <stdint.h>
+#include <stdlib.h>
+
+#define UBRR_VALUE(BAUD) (F_CPU/(BAUD*16UL)-1)
+#define UBRR_VALUE_DOUBLE_SPEED(BAUD) (F_CPU/(BAUD*16UL)-1)
+
+enum UART_SPEED_MODE{
+	USE_1X,
+	USE_2X
+};
+
+
+
+
+void uart_init(uint32_t baud, enum UART_SPEED_MODE SendingSpeed);
+
+int8_t uart_heap_putc(unsigned char data);
+int8_t uart_heap_puts(const char *s);
+void clear_link_list();
+
+struct node
+{
+	uint8_t m_data;
+	struct node * m_pnext;
+};
+
+
+
+
+#endif //UART_H
