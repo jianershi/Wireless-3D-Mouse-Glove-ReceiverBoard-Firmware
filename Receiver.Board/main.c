@@ -23,7 +23,7 @@ int main(){
 
 
 //Initializing UART
- uart_init(38400,USE_1X); //set uart baud rate to 500K=500000
+ uart_init(375000,USE_1X); //set uart baud rate to 500K=500000
 
 //Initializing SPI
  SPI_Init(D2,MSB,Rising,Leading);
