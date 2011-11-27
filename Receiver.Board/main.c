@@ -12,6 +12,7 @@
 #include <avr/pgmspace.h>
 #include "nrf24l01p.h"
 #include "spi.h"
+#include <alloca.h>
 
 
 void (*reset)(void);
@@ -60,6 +61,9 @@ ISR(INT1_vect)
 	CEDown();
 	 // new data available in the RX FIFO, MCU setit self to Stand-by I mode
 
+	WriteReg(STATUS, 0x7E); // clear the interrupt bit
+
+
 		ucTmp3 = NOP;
 
 		CMD_2(R_RX_PL_WID, &ucTmp3, 1, &ucTmp3); // read the length of the package
@@ -71,7 +75,8 @@ ISR(INT1_vect)
 			return;
 		}
 
-		m_pucBuff = (uint8_t*) malloc((ucTmp3+1) * sizeof(uint8_t));
+		//m_pucBuff = (uint8_t*) malloc((ucTmp3+1) * sizeof(uint8_t));
+		m_pucBuff = (uint8_t*) alloca((ucTmp3+1) * sizeof(uint8_t));
 		// allocate the space for the received data
 		if (m_pucBuff==NULL) //alocation fail
 			{
@@ -86,13 +91,14 @@ ISR(INT1_vect)
 
 
 		CEUp(); //return to RTX mode
-		WriteReg(STATUS, 0x7E); // clear the interrupt bit
 
 		m_pucBuff[ucTmp3]='\0';
 
 
 		uart_puts((const char *)m_pucBuff);
 
-		free (m_pucBuff);
+		//free (m_pucBuff);
+
+
 
 }

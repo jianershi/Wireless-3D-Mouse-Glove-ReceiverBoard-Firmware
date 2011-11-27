@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="17" version="2.0">
+<workbench progressCount="28" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="100" y="100">
 <fastViewData fastViewLocation="1024"/>
@@ -8,7 +8,7 @@
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="153" y="30"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="122" y="30"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="de.innot.avreclipse.actionset.avrdude" itemType="typeToolBarContribution" x="46" y="30"/>
 <coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="167" y="30"/>
@@ -16,11 +16,11 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="84" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -29,26 +29,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="uart.c" partName="uart.c" path="C:/Users/Paul Shi/git_project/eclipse.workspace/Receiver.Board/uart.c" title="uart.c" tooltip="Receiver.Board/uart.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Receiver.Board/uart.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2122" selectionTopPixel="964"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="uart.h" partName="uart.h" path="C:/Users/Paul Shi/git_project/eclipse.workspace/Receiver.Board/uart.h" title="uart.h" tooltip="Receiver.Board/uart.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Receiver.Board/uart.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="395" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/Paul Shi/git_project/eclipse.workspace/Receiver.Board/main.c" title="main.c" tooltip="Receiver.Board/main.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Receiver.Board/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="282" selectionTopPixel="0"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
@@ -67,7 +51,8 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (1 item)"/>
+<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -127,7 +112,7 @@
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="org.eclipse.cdt.ui.CPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
@@ -336,94 +321,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Receiver.Board/main.c"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/C:/Users/Paul%20Shi/workspace/new/uart.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Receiver.Board/nrf24l01p.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Receiver.Board/nrf24l01p.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Receiver.Board/uart.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Receiver.Board/uart.h"/>
-</editors>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="uart.c" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="nrf24l01p.c" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="nrf24l01p.h" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="uart.c" index="4">
-<position info="not_deleted" x="254" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1270" y="0"/>
-</item>
-<item historyLabel="nrf24l01p.c" index="2">
-<position info="not_deleted" x="2859" y="5"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1554" y="0"/>
-</item>
-<item historyLabel="uart.c" index="4">
-<position info="not_deleted" x="3280" y="14"/>
-</item>
-<item historyLabel="uart.c" index="4">
-<position info="not_deleted" x="3391" y="0"/>
-</item>
-<item historyLabel="uart.c" index="4">
-<position info="not_deleted" x="2608" y="14"/>
-</item>
-<item historyLabel="nrf24l01p.c" index="2">
-<position info="not_deleted" x="435" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="949" y="0"/>
-</item>
-<item historyLabel="nrf24l01p.c" index="2">
-<position info="not_deleted" x="3305" y="3"/>
-</item>
-<item historyLabel="uart.c" index="4">
-<position info="not_deleted" x="2608" y="14"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1272" y="0"/>
-</item>
-<item historyLabel="nrf24l01p.c" index="2">
-<position info="not_deleted" x="9074" y="3287"/>
-</item>
-<item historyLabel="uart.c" index="4">
-<position info="not_deleted" x="2608" y="14"/>
-</item>
-<item historyLabel="nrf24l01p.c" index="2">
-<position info="not_deleted" x="9074" y="3287"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1272" y="0"/>
-</item>
-<item historyLabel="nrf24l01p.h" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="uart.c" index="4">
-<position info="not_deleted" x="2122" y="0"/>
-</item>
-<item historyLabel="uart.h" index="5">
-<position info="not_deleted" x="395" y="0"/>
-</item>
-<item active="true" historyLabel="main.c" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -440,8 +338,8 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="Receiver.Board/main.c">
-<persistable path="/Receiver.Board/main.c"/>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stddef.h" tooltip="C:\WinAVR-20100110\lib\gcc\avr\4.3.3\include\stddef.h">
+<persistable path="C:\WinAVR-20100110\lib\gcc\avr\4.3.3\include\stddef.h" project="Receiver.Board"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="uart.h" tooltip="Receiver.Board/uart.h">
 <persistable path="/Receiver.Board/uart.h"/>
@@ -452,8 +350,23 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="nrf24l01p.h" tooltip="Receiver.Board/nrf24l01p.h">
 <persistable path="/Receiver.Board/nrf24l01p.h"/>
 </file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="gpio.c" tooltip="C:\Users\Paul Shi\Downloads\asf-standalone-archive-2.8.1.36\asf-2.8.1\avr32\drivers\gpio\gpio.c">
+<persistable uri="file:/C:/Users/Paul%20Shi/Downloads/asf-standalone-archive-2.8.1.36/asf-2.8.1/avr32/drivers/gpio/gpio.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="Receiver.Board/main.c">
+<persistable path="/Receiver.Board/main.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="nrf24l01p.c" tooltip="Receiver.Board/nrf24l01p.c">
 <persistable path="/Receiver.Board/nrf24l01p.c"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tc.c" tooltip="C:\Users\Paul Shi\Downloads\asf-standalone-archive-2.8.1.36\asf-2.8.1\avr32\drivers\tc\tc.c">
+<persistable uri="file:/C:/Users/Paul%20Shi/Downloads/asf-standalone-archive-2.8.1.36/asf-2.8.1/avr32/drivers/tc/tc.c"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="pm.c" tooltip="C:\Users\Paul Shi\Downloads\asf-standalone-archive-2.8.1.36\asf-2.8.1\avr32\drivers\pm\pm.c">
+<persistable uri="file:/C:/Users/Paul%20Shi/Downloads/asf-standalone-archive-2.8.1.36/asf-2.8.1/avr32/drivers/pm/pm.c"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="c2 new.c" tooltip="C:\TEMP\c2 new.c">
+<persistable uri="file:/C:/TEMP/c2%20new.c"/>
 </file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="uart.c" tooltip="C:\Users\Paul Shi\workspace\new\uart.c">
 <persistable uri="file:/C:/Users/Paul%20Shi/workspace/new/uart.c"/>

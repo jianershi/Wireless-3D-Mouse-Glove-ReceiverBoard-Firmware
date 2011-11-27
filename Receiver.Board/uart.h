@@ -29,8 +29,8 @@ enum UART_SPEED_MODE{
 void uart_init(uint32_t baud, enum UART_SPEED_MODE SendingSpeed);
 void uart_putc(unsigned char data);
 void uart_puts(const char *s );
-void uart_puts_p(const char *progmem_s);
-unsigned char uart_getc();
+//void uart_puts_p(const char *progmem_s);
+//unsigned char uart_getc();
 
 
 

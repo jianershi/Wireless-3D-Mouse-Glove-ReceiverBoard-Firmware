@@ -7,6 +7,14 @@ rm -rf  ./main.o ./nrf24l01p.o ./spi.o ./uart.o  ./main.d ./nrf24l01p.d ./spi.d 
 
 **** Build Finished ****
 
+**** Clean-only build of configuration Debug for project Receiver.Board ****
+
+make clean 
+rm -rf  ./main.o ./nrf24l01p.o ./spi.o ./uart.o  ./main.d ./nrf24l01p.d ./spi.d ./uart.d  Receiver.Board.hex  Receiver.Board.lss  sizedummy  Receiver.Board.elf
+ 
+
+**** Build Finished ****
+
 **** Build of configuration Debug for project Receiver.Board ****
 
 make all 
@@ -49,10 +57,10 @@ AVR Memory Usage
 ----------------
 Device: atmega8
 
-Program:    1894 bytes (23.1% Full)
+Program:    1380 bytes (16.8% Full)
 (.text + .data + .bootloader)
 
-Data:        544 bytes (53.1% Full)
+Data:        534 bytes (52.1% Full)
 (.data + .bss + .noinit)
 
 
@@ -64,16 +72,53 @@ Finished building: sizedummy
 **** Build of configuration Debug for project Receiver.Board ****
 
 make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+../main.c: In function '__vector_2':
+../main.c:101: warning: implicit declaration of function 'delay_ms'
+Finished building: ../main.c
+ 
+Building target: Receiver.Board.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Receiver.Board.map -mmcu=atmega8 -o "Receiver.Board.elf"  ./main.o ./nrf24l01p.o ./spi.o ./uart.o   
+./main.o: In function `__vector_2':
+../main.c:101: undefined reference to `delay_ms'
+make: *** [Receiver.Board.elf] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Receiver.Board ****
+
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Receiver.Board.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Receiver.Board.map -mmcu=atmega8 -o "Receiver.Board.elf"  ./main.o ./nrf24l01p.o ./spi.o ./uart.o   
+Finished building target: Receiver.Board.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Receiver.Board.elf  >"Receiver.Board.lss"
+Finished building: Receiver.Board.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex Receiver.Board.elf  "Receiver.Board.hex"
+Finished building: Receiver.Board.hex
+ 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega8 Receiver.Board.elf
 AVR Memory Usage
 ----------------
 Device: atmega8
 
-Program:    1894 bytes (23.1% Full)
+Program:    1394 bytes (17.0% Full)
 (.text + .data + .bootloader)
 
-Data:        544 bytes (53.1% Full)
+Data:        534 bytes (52.1% Full)
 (.data + .bss + .noinit)
 
 
@@ -109,10 +154,10 @@ AVR Memory Usage
 ----------------
 Device: atmega8
 
-Program:    1894 bytes (23.1% Full)
+Program:    1380 bytes (16.8% Full)
 (.text + .data + .bootloader)
 
-Data:        544 bytes (53.1% Full)
+Data:        534 bytes (52.1% Full)
 (.data + .bss + .noinit)
 
 
@@ -148,10 +193,10 @@ AVR Memory Usage
 ----------------
 Device: atmega8
 
-Program:    1894 bytes (23.1% Full)
+Program:    1386 bytes (16.9% Full)
 (.text + .data + .bootloader)
 
-Data:        544 bytes (53.1% Full)
+Data:        534 bytes (52.1% Full)
 (.data + .bss + .noinit)
 
 
@@ -187,10 +232,10 @@ AVR Memory Usage
 ----------------
 Device: atmega8
 
-Program:    1894 bytes (23.1% Full)
+Program:    1386 bytes (16.9% Full)
 (.text + .data + .bootloader)
 
-Data:        544 bytes (53.1% Full)
+Data:        534 bytes (52.1% Full)
 (.data + .bss + .noinit)
 
 
@@ -226,10 +271,10 @@ AVR Memory Usage
 ----------------
 Device: atmega8
 
-Program:    1894 bytes (23.1% Full)
+Program:    1386 bytes (16.9% Full)
 (.text + .data + .bootloader)
 
-Data:        544 bytes (53.1% Full)
+Data:        534 bytes (52.1% Full)
 (.data + .bss + .noinit)
 
 
@@ -265,10 +310,374 @@ AVR Memory Usage
 ----------------
 Device: atmega8
 
-Program:    1894 bytes (23.1% Full)
+Program:    1386 bytes (16.9% Full)
 (.text + .data + .bootloader)
 
-Data:        544 bytes (53.1% Full)
+Data:        534 bytes (52.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Receiver.Board ****
+
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Receiver.Board.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Receiver.Board.map -mmcu=atmega8 -o "Receiver.Board.elf"  ./main.o ./nrf24l01p.o ./spi.o ./uart.o   
+Finished building target: Receiver.Board.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Receiver.Board.elf  >"Receiver.Board.lss"
+Finished building: Receiver.Board.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex Receiver.Board.elf  "Receiver.Board.hex"
+Finished building: Receiver.Board.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 Receiver.Board.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    1386 bytes (16.9% Full)
+(.text + .data + .bootloader)
+
+Data:        534 bytes (52.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Receiver.Board ****
+
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Receiver.Board.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Receiver.Board.map -mmcu=atmega8 -o "Receiver.Board.elf"  ./main.o ./nrf24l01p.o ./spi.o ./uart.o   
+Finished building target: Receiver.Board.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Receiver.Board.elf  >"Receiver.Board.lss"
+Finished building: Receiver.Board.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex Receiver.Board.elf  "Receiver.Board.hex"
+Finished building: Receiver.Board.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 Receiver.Board.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    1386 bytes (16.9% Full)
+(.text + .data + .bootloader)
+
+Data:        534 bytes (52.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Receiver.Board ****
+
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../nrf24l01p.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=12000000UL -MMD -MP -MF"nrf24l01p.d" -MT"nrf24l01p.d" -c -o "nrf24l01p.o" "../nrf24l01p.c"
+Finished building: ../nrf24l01p.c
+ 
+Building target: Receiver.Board.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Receiver.Board.map -mmcu=atmega8 -o "Receiver.Board.elf"  ./main.o ./nrf24l01p.o ./spi.o ./uart.o   
+Finished building target: Receiver.Board.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Receiver.Board.elf  >"Receiver.Board.lss"
+Finished building: Receiver.Board.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex Receiver.Board.elf  "Receiver.Board.hex"
+Finished building: Receiver.Board.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 Receiver.Board.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    1386 bytes (16.9% Full)
+(.text + .data + .bootloader)
+
+Data:        534 bytes (52.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Receiver.Board ****
+
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Receiver.Board.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Receiver.Board.map -mmcu=atmega8 -o "Receiver.Board.elf"  ./main.o ./nrf24l01p.o ./spi.o ./uart.o   
+Finished building target: Receiver.Board.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Receiver.Board.elf  >"Receiver.Board.lss"
+Finished building: Receiver.Board.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex Receiver.Board.elf  "Receiver.Board.hex"
+Finished building: Receiver.Board.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 Receiver.Board.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    1386 bytes (16.9% Full)
+(.text + .data + .bootloader)
+
+Data:        534 bytes (52.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Receiver.Board ****
+
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Receiver.Board.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Receiver.Board.map -mmcu=atmega8 -o "Receiver.Board.elf"  ./main.o ./nrf24l01p.o ./spi.o ./uart.o   
+Finished building target: Receiver.Board.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Receiver.Board.elf  >"Receiver.Board.lss"
+Finished building: Receiver.Board.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex Receiver.Board.elf  "Receiver.Board.hex"
+Finished building: Receiver.Board.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 Receiver.Board.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    1386 bytes (16.9% Full)
+(.text + .data + .bootloader)
+
+Data:        534 bytes (52.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Receiver.Board ****
+
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=12000000UL -MMD -MP -MF"uart.d" -MT"uart.d" -c -o "uart.o" "../uart.c"
+Finished building: ../uart.c
+ 
+Building target: Receiver.Board.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Receiver.Board.map -mmcu=atmega8 -o "Receiver.Board.elf"  ./main.o ./nrf24l01p.o ./spi.o ./uart.o   
+Finished building target: Receiver.Board.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Receiver.Board.elf  >"Receiver.Board.lss"
+Finished building: Receiver.Board.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex Receiver.Board.elf  "Receiver.Board.hex"
+Finished building: Receiver.Board.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 Receiver.Board.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    1260 bytes (15.4% Full)
+(.text + .data + .bootloader)
+
+Data:        524 bytes (51.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Receiver.Board ****
+
+make all 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=12000000UL -MMD -MP -MF"uart.d" -MT"uart.d" -c -o "uart.o" "../uart.c"
+Finished building: ../uart.c
+ 
+Building target: Receiver.Board.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Receiver.Board.map -mmcu=atmega8 -o "Receiver.Board.elf"  ./main.o ./nrf24l01p.o ./spi.o ./uart.o   
+Finished building target: Receiver.Board.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Receiver.Board.elf  >"Receiver.Board.lss"
+Finished building: Receiver.Board.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex Receiver.Board.elf  "Receiver.Board.hex"
+Finished building: Receiver.Board.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 Receiver.Board.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    1278 bytes (15.6% Full)
+(.text + .data + .bootloader)
+
+Data:        524 bytes (51.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Receiver.Board ****
+
+make all 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=12000000UL -MMD -MP -MF"uart.d" -MT"uart.d" -c -o "uart.o" "../uart.c"
+Finished building: ../uart.c
+ 
+Building target: Receiver.Board.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Receiver.Board.map -mmcu=atmega8 -o "Receiver.Board.elf"  ./main.o ./nrf24l01p.o ./spi.o ./uart.o   
+Finished building target: Receiver.Board.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Receiver.Board.elf  >"Receiver.Board.lss"
+Finished building: Receiver.Board.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex Receiver.Board.elf  "Receiver.Board.hex"
+Finished building: Receiver.Board.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 Receiver.Board.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    1260 bytes (15.4% Full)
+(.text + .data + .bootloader)
+
+Data:        524 bytes (51.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Receiver.Board ****
+
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 Receiver.Board.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    1260 bytes (15.4% Full)
+(.text + .data + .bootloader)
+
+Data:        524 bytes (51.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Receiver.Board ****
+
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 Receiver.Board.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    1260 bytes (15.4% Full)
+(.text + .data + .bootloader)
+
+Data:        524 bytes (51.2% Full)
 (.data + .bss + .noinit)
 
 

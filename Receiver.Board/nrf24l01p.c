@@ -47,7 +47,9 @@ void NRF24L01P_Init(NRF24L01P_Property_t NRF24L01P_mProperty)
 	CMD(FLUSH_RX);
 	WriteReg(STATUS, 0x70); // clear the interrupt
 
-	WriteReg(RF_SETUP, 0x26); // set the data rate to 250kbps with 0dBm output power
+	//WriteReg(RF_SETUP, 0x26); // set the data rate to 250kbps with 0dBm output power
+	WriteReg(RF_SETUP, 0x0E); // set the data rate to 250kbps with 0dBm output power
+
 	WriteReg(EN_AA, 0x01); // enable auto acknowledgment for pipe0
 	WriteReg(EN_RXADDR, 0x01); // enable pipe0
 	WriteReg(DYNPD, 0x01); // enable dynamic payload length in pipe0

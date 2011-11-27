@@ -12,10 +12,12 @@
 //#include <util/setbaud.h>
 #include <avr/pgmspace.h>
 #include "uart.h"
+#include <stddef.h>
 
+void (*reset)(void);
 
 static volatile unsigned char UART_TxBuf[UART_TX_BUFFER_SIZE];
-static volatile unsigned char UART_RxBuf[UART_RX_BUFFER_SIZE];
+//static volatile unsigned char UART_RxBuf[UART_RX_BUFFER_SIZE];
 static volatile unsigned char UART_TxHead; //writing --last location written
 static volatile unsigned char UART_TxTail; //read    --last location read
 static volatile unsigned char UART_RxHead; //writing
@@ -24,6 +26,9 @@ static volatile unsigned char UART_RxTail; //read
 
 void uart_init(uint32_t baud, enum UART_SPEED_MODE SendingSpeed)
 {
+
+	reset=NULL;
+
 	UART_TxHead=0;
 	UART_TxTail=0;
 	UART_RxHead=0;
@@ -51,7 +56,8 @@ void uart_init(uint32_t baud, enum UART_SPEED_MODE SendingSpeed)
 
 
     //Enable receive interrupt, enable Receiver and Transmitter
-	UCSRB = _BV(RXCIE)|_BV(RXEN)|_BV(TXEN);
+	//UCSRB = _BV(RXCIE)|_BV(RXEN)|_BV(TXEN);
+	UCSRB = _BV(RXEN)|_BV(TXEN);
 
 //    //ENABLE Interrupt
 //    if (using_interrupt)
@@ -80,8 +86,6 @@ void uart_putc(unsigned char data)
 	unsigned char tmpHEAD;
 	tmpHEAD=(UART_TxHead+1) & (UART_TX_BUFFER_SIZE-1); //buffer about to full, refuse to write
 	while (tmpHEAD==UART_TxTail) ; //wait for freespace
-//	if (tmpHEAD==UART_TxTail)
-//		tmpHEAD++;	//Flush buffer
 
 	cli();
 	UART_TxHead=tmpHEAD;
@@ -96,16 +100,16 @@ void uart_putc(unsigned char data)
 
 }
 
-void uart_puts_p(const char *progmem_s)
-{
-    register char c;
-
-    while ( (c = pgm_read_byte(progmem_s++)) )
-      uart_putc(c);
-
-
-
-}
+//void uart_puts_p(const char *progmem_s)
+//{
+//    register char c;
+//
+//    while ( (c = pgm_read_byte(progmem_s++)) )
+//      uart_putc(c);
+//
+//
+//
+//}
 
 
 void uart_puts(const char *s )
@@ -117,27 +121,27 @@ void uart_puts(const char *s )
 
 
 
-unsigned char uart_getc()
-{
-	unsigned char tmpTAIL;
-
-	if (UART_RxHead==UART_RxTail)
-	{
-		return 0; //empty buffer
-	}
-
-	tmpTAIL=(UART_RxTail+1) & (UART_RX_BUFFER_SIZE-1);
-//	if (tmpTAIL==UART_RxHEAD)
+//unsigned char uart_getc()
+//{
+//	unsigned char tmpTAIL;
+//
+//	if (UART_RxHead==UART_RxTail)
 //	{
-//		return _BV(8);//error
+//		return 0; //empty buffer
 //	}
-	UART_RxTail=tmpTAIL;
-
-	return UART_RxBuf[UART_RxTail];
-
-
-
-}
+//
+//	tmpTAIL=(UART_RxTail+1) & (UART_RX_BUFFER_SIZE-1);
+////	if (tmpTAIL==UART_RxHEAD)
+////	{
+////		return _BV(8);//error
+////	}
+//	UART_RxTail=tmpTAIL;
+//
+//	return UART_RxBuf[UART_RxTail];
+//
+//
+//
+//}
 
 /*void uart_gets(const char * s)
 {
@@ -183,37 +187,37 @@ ISR(USART_UDRE_vect)
 //Receiving Interrupt
 ISR(USART_RXC_vect)
 {
-
-/*************************************************************************
-Function: UART Receive Complete interrupt
-Purpose:  called when the UART has received a character
-**************************************************************************/
-
-	unsigned char tmphead;
-	unsigned char data;
-	//unsigned char usr;
-	//unsigned char lastRxError;
-
-
-	/* read UART status register and UART data register */
-	//usr  = UART0_STATUS;
-	data = UDR;
-
-
-	/* calculate buffer index */
-	tmphead = ( UART_RxHead + 1) & (UART_RX_BUFFER_SIZE-1);
-
-	//if ( tmphead == UART_RxTail ) {
-	//	/* error: receive buffer overflow */
-	//	lastRxError = UART_BUFFER_OVERFLOW >> 8;
-	//}else{
-		/* store new index */
-		UART_RxHead = tmphead;
-		/* store received data in buffer */
-		UART_RxBuf[tmphead] = data;
-	//}
-	//UART_LastRxError = lastRxError;
-
+//
+///*************************************************************************
+//Function: UART Receive Complete interrupt
+//Purpose:  called when the UART has received a character
+//**************************************************************************/
+//
+//	unsigned char tmphead;
+//	unsigned char data;
+//	//unsigned char usr;
+//	//unsigned char lastRxError;
+//
+//
+//	/* read UART status register and UART data register */
+//	//usr  = UART0_STATUS;
+//	data = UDR;
+//
+//
+//	/* calculate buffer index */
+//	tmphead = ( UART_RxHead + 1) & (UART_RX_BUFFER_SIZE-1);
+//
+//	//if ( tmphead == UART_RxTail ) {
+//	//	/* error: receive buffer overflow */
+//	//	lastRxError = UART_BUFFER_OVERFLOW >> 8;
+//	//}else{
+//		/* store new index */
+//		UART_RxHead = tmphead;
+//		/* store received data in buffer */
+//		UART_RxBuf[tmphead] = data;
+//	//}
+//	//UART_LastRxError = lastRxError;
+//
 
 
 }
