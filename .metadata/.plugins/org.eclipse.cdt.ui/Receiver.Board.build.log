@@ -2,6 +2,24 @@
 **** Build of configuration Debug for project Receiver.Board ****
 
 make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Receiver.Board.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Receiver.Board.map -mmcu=atmega8 -o "Receiver.Board.elf"  ./main.o ./nrf24l01p.o ./spi.o ./uart.o   
+Finished building target: Receiver.Board.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Receiver.Board.elf  >"Receiver.Board.lss"
+Finished building: Receiver.Board.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex Receiver.Board.elf  "Receiver.Board.hex"
+Finished building: Receiver.Board.hex
+ 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega8 Receiver.Board.elf
 AVR Memory Usage
