@@ -7,6 +7,11 @@ Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
 Finished building: ../main.c
  
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=12000000UL -MMD -MP -MF"uart.d" -MT"uart.d" -c -o "uart.o" "../uart.c"
+Finished building: ../uart.c
+ 
 Building target: Receiver.Board.elf
 Invoking: AVR C Linker
 avr-gcc -Wl,-Map,Receiver.Board.map -mmcu=atmega8 -o "Receiver.Board.elf"  ./main.o ./nrf24l01p.o ./spi.o ./uart.o   
@@ -26,7 +31,7 @@ AVR Memory Usage
 ----------------
 Device: atmega8
 
-Program:    1260 bytes (15.4% Full)
+Program:    1294 bytes (15.8% Full)
 (.text + .data + .bootloader)
 
 Data:        524 bytes (51.2% Full)

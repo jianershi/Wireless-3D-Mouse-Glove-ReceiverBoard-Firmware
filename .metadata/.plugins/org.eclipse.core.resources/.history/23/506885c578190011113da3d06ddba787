@@ -92,11 +92,10 @@ ISR(INT1_vect)
 
 		CEUp(); //return to RTX mode
 
-		//m_pucBuff[ucTmp3]='\0';
+		m_pucBuff[ucTmp3]='\0';
 
 
-		uart_puts_length((const char *)m_pucBuff,ucTmp3);
-		//uart_puts((const char *)m_pucBuff);
+		uart_puts((const char *)m_pucBuff);
 
 		//free (m_pucBuff);
 

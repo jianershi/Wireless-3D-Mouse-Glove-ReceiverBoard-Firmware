@@ -8,7 +8,7 @@
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="122" y="30"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="153" y="30"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="de.innot.avreclipse.actionset.avrdude" itemType="typeToolBarContribution" x="46" y="30"/>
 <coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="167" y="30"/>
@@ -16,7 +16,7 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="84" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -337,20 +337,20 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="Receiver.Board/main.c">
 <persistable path="/Receiver.Board/main.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="nrf24l01p.c" tooltip="Receiver.Board/nrf24l01p.c">
-<persistable path="/Receiver.Board/nrf24l01p.c"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="nrf24l01p.h" tooltip="Receiver.Board/nrf24l01p.h">
 <persistable path="/Receiver.Board/nrf24l01p.h"/>
 </file>
-<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stddef.h" tooltip="C:\WinAVR-20100110\lib\gcc\avr\4.3.3\include\stddef.h">
-<persistable path="C:\WinAVR-20100110\lib\gcc\avr\4.3.3\include\stddef.h" project="Receiver.Board"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="nrf24l01p.c" tooltip="Receiver.Board/nrf24l01p.c">
+<persistable path="/Receiver.Board/nrf24l01p.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="uart.h" tooltip="Receiver.Board/uart.h">
 <persistable path="/Receiver.Board/uart.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="uart.c" tooltip="Receiver.Board/uart.c">
 <persistable path="/Receiver.Board/uart.c"/>
+</file>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stddef.h" tooltip="C:\WinAVR-20100110\lib\gcc\avr\4.3.3\include\stddef.h">
+<persistable path="C:\WinAVR-20100110\lib\gcc\avr\4.3.3\include\stddef.h" project="Receiver.Board"/>
 </file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="gpio.c" tooltip="C:\Users\Paul Shi\Downloads\asf-standalone-archive-2.8.1.36\asf-2.8.1\avr32\drivers\gpio\gpio.c">
 <persistable uri="file:/C:/Users/Paul%20Shi/Downloads/asf-standalone-archive-2.8.1.36/asf-2.8.1/avr32/drivers/gpio/gpio.c"/>

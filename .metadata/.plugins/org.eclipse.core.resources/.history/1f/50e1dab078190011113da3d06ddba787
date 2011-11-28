@@ -119,15 +119,6 @@ void uart_puts(const char *s )
 
 }/* uart_puts */
 
-void uart_puts_length(const char *s, unsigned char length )
-{
-	uint8_t i;
-	for (i=0;i<length;i++)
-	{
-      uart_putc(*s++);
-	}
-}/* uart_puts */
-
 
 
 //unsigned char uart_getc()

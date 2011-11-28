@@ -126,7 +126,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x4ec
+.text           0x00000000      0x50e
  *(.vectors)
  .vectors       0x00000000       0x26 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm8.o
                 0x00000000                __vectors
@@ -196,46 +196,47 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a
                 0x00000046                __vector_10
                 0x00000046                __vector_16
                 0x00000046                __vector_18
- .text          0x00000048      0x112 ./main.o
-                0x0000011e                main
+ .text          0x00000048      0x10a ./main.o
+                0x00000116                main
                 0x00000048                __vector_2
- .text          0x0000015a      0x1e2 ./nrf24l01p.o
-                0x0000015e                CEUp
-                0x0000015a                CEDown
-                0x00000166                Stop_SS
-                0x0000016a                ReadReg
-                0x000001ea                ChangeAddr
-                0x00000288                CMD
-                0x000001de                WriteReg_2
-                0x0000026a                SetProperty
-                0x0000018e                WriteReg
-                0x00000296                NRF24L01P_Init
-                0x000001ac                CMD_2
-                0x00000162                Start_SS
- .text          0x0000033c       0x54 ./spi.o
-                0x0000035a                TransChar
-                0x00000364                TransBlock
-                0x0000033c                SPI_Init
- .text          0x00000390      0x114 ./uart.o
-                0x00000448                __vector_12
-                0x00000430                uart_puts
-                0x00000490                __vector_11
-                0x00000390                uart_init
-                0x00000408                uart_putc
- .text          0x000004a4        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_udivmodsi4.o)
- .text          0x000004a4        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
- .text          0x000004a4        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_clear_bss.o)
-                0x000004a4                . = ALIGN (0x2)
+ .text          0x00000152      0x1e2 ./nrf24l01p.o
+                0x00000156                CEUp
+                0x00000152                CEDown
+                0x0000015e                Stop_SS
+                0x00000162                ReadReg
+                0x000001e2                ChangeAddr
+                0x00000280                CMD
+                0x000001d6                WriteReg_2
+                0x00000262                SetProperty
+                0x00000186                WriteReg
+                0x0000028e                NRF24L01P_Init
+                0x000001a4                CMD_2
+                0x0000015a                Start_SS
+ .text          0x00000334       0x54 ./spi.o
+                0x00000352                TransChar
+                0x0000035c                TransBlock
+                0x00000334                SPI_Init
+ .text          0x00000388      0x13e ./uart.o
+                0x0000046a                __vector_12
+                0x00000440                uart_puts_length
+                0x00000428                uart_puts
+                0x000004b2                __vector_11
+                0x00000388                uart_init
+                0x00000400                uart_putc
+ .text          0x000004c6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_udivmodsi4.o)
+ .text          0x000004c6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+ .text          0x000004c6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_clear_bss.o)
+                0x000004c6                . = ALIGN (0x2)
  *(.text.*)
- .text.libgcc   0x000004a4       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_udivmodsi4.o)
-                0x000004a4                __udivmodsi4
- .text.libgcc   0x000004e8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
- .text.libgcc   0x000004e8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_clear_bss.o)
-                0x000004e8                . = ALIGN (0x2)
+ .text.libgcc   0x000004c6       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_udivmodsi4.o)
+                0x000004c6                __udivmodsi4
+ .text.libgcc   0x0000050a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+ .text.libgcc   0x0000050a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_clear_bss.o)
+                0x0000050a                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000004e8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
-                0x000004e8                exit
-                0x000004e8                _exit
+ .fini9         0x0000050a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+                0x0000050a                exit
+                0x0000050a                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -254,11 +255,11 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000004e8        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+ .fini0         0x0000050a        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
  *(.fini0)
-                0x000004ec                _etext = .
+                0x0000050e                _etext = .
 
-.data           0x00800060        0x0 load address 0x000004ec
+.data           0x00800060        0x0 load address 0x0000050e
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm8.o
@@ -294,8 +295,8 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a
                 0x00800264                reset
                 0x00800266                NRF24L01P_mProperty
                 0x0080026c                PROVIDE (__bss_end, .)
-                0x000004ec                __data_load_start = LOADADDR (.data)
-                0x000004ec                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000050e                __data_load_start = LOADADDR (.data)
+                0x0000050e                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x0080026c        0x0
                 0x0080026c                PROVIDE (__noinit_start, .)
@@ -320,19 +321,19 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x14dc
+.stab           0x00000000     0x1524
  *(.stab)
- .stab          0x00000000      0x69c ./main.o
- .stab          0x0000069c      0x744 ./nrf24l01p.o
+ .stab          0x00000000      0x690 ./main.o
+ .stab          0x00000690      0x744 ./nrf24l01p.o
                                 0xa20 (size before relaxing)
- .stab          0x00000de0      0x2e8 ./spi.o
+ .stab          0x00000dd4      0x2e8 ./spi.o
                                 0x570 (size before relaxing)
- .stab          0x000010c8      0x414 ./uart.o
-                                0x690 (size before relaxing)
+ .stab          0x000010bc      0x468 ./uart.o
+                                0x6e4 (size before relaxing)
 
-.stabstr        0x00000000     0x118f
+.stabstr        0x00000000     0x11b7
  *(.stabstr)
- .stabstr       0x00000000     0x118f ./main.o
+ .stabstr       0x00000000     0x11b7 ./main.o
 
 .stab.excl
  *(.stab.excl)
