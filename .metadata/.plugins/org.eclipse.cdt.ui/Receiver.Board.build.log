@@ -2,15 +2,10 @@
 **** Build of configuration Debug for project Receiver.Board ****
 
 make all 
-Building file: ../main.c
+Building file: ../nrf24l01p.c
 Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building file: ../uart.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=12000000UL -MMD -MP -MF"uart.d" -MT"uart.d" -c -o "uart.o" "../uart.c"
-Finished building: ../uart.c
+avr-gcc -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=12000000UL -MMD -MP -MF"nrf24l01p.d" -MT"nrf24l01p.d" -c -o "nrf24l01p.o" "../nrf24l01p.c"
+Finished building: ../nrf24l01p.c
  
 Building target: Receiver.Board.elf
 Invoking: AVR C Linker
