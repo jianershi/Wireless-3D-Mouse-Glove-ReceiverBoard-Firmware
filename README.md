@@ -4,7 +4,7 @@ A wireless 3D mouse that is able to track orientations of each fingers. All orie
 
 This repo inclues firmware for the ReceiverBoard. It runs on an AVR8 MCU
 
-![rep](https://raw.github.com/paulshi/Wireless-3D-Mouse-Glove-ReceiverBoard-Firmware/master/eceiverboardfront.jpg)
+![rep](https://raw.github.com/paulshi/Wireless-3D-Mouse-Glove-ReceiverBoard-Firmware/master/receiverboardfront.jpg)
 
 ##Background
 [2011 Senior Design Project](http://courses.engr.illinois.edu/ece445/?f=Projects&sem=fall2011&proj=17#a17)
