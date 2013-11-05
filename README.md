@@ -1,4 +1,4 @@
-#Wireless 3D Mouse on a Glove
+#Wireless 3D Mouse on a Glove ReceiverBoard Firmware
 
 A wireless 3D mouse that is able to track orientations of each fingers. All orientation calculation ins done on the onboard Atmel 32bit MCU. 
 
