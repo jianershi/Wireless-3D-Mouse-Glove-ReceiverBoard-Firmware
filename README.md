@@ -13,3 +13,6 @@ This project is combined effort of [Jianer Shi](https://github.com/paulshi) & [B
 
 ##Design Documentation
 http://paulshi.me/projects/wireless3dmouse/
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/paulshi/wireless-3d-mouse-glove-receiverboard-firmware/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
